@@ -1,7 +1,13 @@
 'use strict';
 
 function getFactorial(num){
-    if (num === 1) return num;
-    return num * getFactorial(num - 1);
+    if (typeof num !== 'number' || num < 0) {
+        return'incorrect number type';
 }
-console.log(getFactorial(10));
+if (num === 0) {
+    return 1;
+  }
+  return num * getFactorial(num - 1);
+}
+
+console.log(getFactorial(5));
